@@ -24,4 +24,7 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  findFood(value: string) {
+    this.foods = this.foodService.getFoodSearchTerm(value)
+  }
 }

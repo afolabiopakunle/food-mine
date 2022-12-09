@@ -1,0 +1,8 @@
+<form>
+  <div class="input-group m-3 w-50 mx-auto">
+    <input (keyup)="searchInput(search.value)" type="text" class="form-control shadow-none" name="foodInput" [(ngModel)]="inputTerm" #search placeholder="Find food"
+           aria-label="Find food" aria-describedby="search-btn">
+    <button class="btn btn-outline-secondary" type="submit" id="search-btn">Search
+    </button>
+  </div>
+</form>

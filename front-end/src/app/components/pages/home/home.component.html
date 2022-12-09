@@ -1,4 +1,5 @@
 <div class="row">
+  <app-search (searchTerm)="findFood($event)" ></app-search>
   <div class="col-md-3 pt-3" *ngFor="let food of foods">
     <a routerLink="/">
     <div class="card" style="width: 18rem;">
