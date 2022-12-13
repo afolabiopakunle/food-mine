@@ -1,0 +1,16 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: #F0F0F0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10rem;
+  font-weight: bold;
+  margin-inline: 0.2rem;
+  color: darkblue;
+}
