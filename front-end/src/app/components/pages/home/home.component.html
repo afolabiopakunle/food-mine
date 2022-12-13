@@ -1,31 +1,5 @@
 <div class="row">
   <app-search (searchTerm)="findFood($event)" ></app-search>
-  <div class="col-md-3 pt-3" *ngFor="let food of foods">
-    <a routerLink="/">
-    <div class="card" style="width: 18rem;">
-      <img [src]="food.imageUrl" class="card-img-top" [alt]="food.name">
-      <div class="card-body">
-        <h5 class="card-title">{{food.name}}</h5>
-        <star-rating
-        [value]="food.stars"
-        [totalstars]="5"
-        checkedcolor="salmon"
-        uncheckedcolor="darkgrey"
-        size="22px"
-        [readonly]="true"
-        ></star-rating>
-        <div>
-          <span *ngFor="let origin of food.origins">{{origin | titlecase}}</span>
-        </div>
-        <div>
-          <span><strong>{{food.cookTime}}</strong> minutes</span>
-        </div>
-        <div>
-          {{food.price | currency}}
-        </div>
-      </div>
-    </div>
-    </a>
-  </div>
+  <app-food-card [foods]="foods"></app-food-card>
 </div>
 
