@@ -23,7 +23,7 @@ export class FoodService {
   }
 
   getAllFoodByTag(searchTag: string): Food[] {
-   return searchTag === 'All' ? this.getAllFood() : this.getAllFood().filter(food => food.tags.includes(searchTag))
+   return searchTag === 'All' ? this.getAllFood() : this.getAllFood().filter(food => food.tags?.map(tag => tag.toLowerCase()).includes(searchTag.toLowerCase()));
   }
 
 }

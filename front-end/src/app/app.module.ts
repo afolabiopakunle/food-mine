@@ -8,6 +8,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { TagsComponent } from './components/partials/tags/tags.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
+    TagsComponent,
 
   ],
   imports: [
