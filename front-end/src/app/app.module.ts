@@ -10,6 +10,7 @@ import { SearchComponent } from './components/partials/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './components/partials/tags/tags.component';
 import { FoodCardComponent } from './components/partials/food-card/food-card.component';
+import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FoodCardComponent } from './components/partials/food-card/food-card.com
     SearchComponent,
     TagsComponent,
     FoodCardComponent,
+    FoodPageComponent,
 
   ],
   imports: [
