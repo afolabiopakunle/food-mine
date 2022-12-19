@@ -22,7 +22,7 @@
         </star-rating>
       </div>
       <div class="origin my-3">
-      <span class="bg-secondary me-2 p-2 rounded-pill" *ngFor="let origin of food?.origins">
+      <span class="bg-secondary me-2 py-2 px-3 text-white rounded-pill" *ngFor="let origin of food?.origins">
         {{origin == 'us' ? (origin | uppercase) : (origin | titlecase)}}
       </span>
       </div>
@@ -41,7 +41,7 @@
       </span>
       </div>
 
-      <button class="btn btn-primary">Add to cart</button>
+      <button class="btn btn-warning text-white btn-lg">Add to cart</button>
     </div>
   </div>
 </div>
