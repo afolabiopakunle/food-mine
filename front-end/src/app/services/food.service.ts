@@ -27,7 +27,7 @@ export class FoodService {
   }
 
   getFoodById(foodId: string) {
-    return this.getAllFood().find(food => food.id === foodId) ?? null;
+    return this.getAllFood().find(food => food.id === foodId) ?? new Food();
   }
 
 }
