@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
       if(params['searchTerm']) {
-        this.foods = this.foodService.getFoodSearchTerm(params['searchTerm'])
+        this.foods = this.foodService.getFoodSearchTerm(params['searchTerm']);
       } else if(params['tag']) {
-        this.foods = this.foodService.getAllFoodByTag(params['tag'])
+        this.foods = this.foodService.getAllFoodByTag(params['tag']);
       } else {
         this.foods = this.foodService.getAllFood();
       }
@@ -27,6 +27,6 @@ export class HomeComponent implements OnInit {
   }
 
   findFood(value: string) {
-    this.foods = this.foodService.getFoodSearchTerm(value)
+    this.foods = this.foodService.getFoodSearchTerm(value);
   }
 }
