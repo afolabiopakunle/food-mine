@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light shadow">
+<nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/"><strong>FoodMine</strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -22,7 +22,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a routerLink="/cart-page" class="nav-link" aria-current="page" href="#">Cart <span class="badge text-bg-danger">4</span></a>
+          <a routerLink="/cart-page" class="nav-link" aria-current="page" href="#">Cart <span *ngIf="cart.items.length > 0" style="right: -0.5rem;" class="position-absolute top-10 start-95 translate-middle badge rounded-pill bg-danger">{{cart.items.length}}</span></a>
         </li>
       </ul>
     </div>
