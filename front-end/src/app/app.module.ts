@@ -13,6 +13,7 @@ import { FoodCardComponent } from './components/partials/food-card/food-card.com
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { CartPageComponent } from './components/pages/cart-page/cart-page.component';
 import { TitleComponent } from './components/partials/title/title.component';
+import { NotFoundPageComponent } from './components/partials/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { TitleComponent } from './components/partials/title/title.component';
     FoodPageComponent,
     CartPageComponent,
     TitleComponent,
+    NotFoundPageComponent,
 
   ],
   imports: [

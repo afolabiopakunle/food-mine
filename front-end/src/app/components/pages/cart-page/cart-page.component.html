@@ -1,12 +1,13 @@
-<app-title title="Cart Page" margin="1.5rem 0"></app-title>
-<div class="container">
+<div class="container pt-5 mt-5">
+  <app-title title="Cart Page" margin="1.5rem 0"></app-title>
   <ng-container *ngIf="cart.items.length === 0">
     <div>Cart is empty</div>
   </ng-container>
   <div class="row" style="position: relative">
     <div class="col-md-9">
       <ul class="list-group">
-        <li class="list-group-item d-flex justify-content-around align-items-center" *ngFor="let cartItem of cart.items">
+        <li class="list-group-item d-flex justify-content-around align-items-center"
+            *ngFor="let cartItem of cart.items">
           <div>
             <img class="img-fluid rounded" width="200" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
           </div>
@@ -36,10 +37,11 @@
         </li>
       </ul>
     </div>
-    <div style="height: 50vh; position: fixed; right: 8rem" class="col-md-3 border rounded-4 p-3 d-flex flex-column align-items-center justify-content-around">
+    <div style="height: 50vh; position: fixed; right: 8rem"
+         class="col-md-3 border rounded-4 p-3 d-flex flex-column align-items-center justify-content-around">
       <div *ngIf="cart.items.length > 0">
-        <div> <strong> Total Items: </strong> {{cart.totalCount}}</div>
-        <div> <strong>Total Price: </strong> {{cart.totalPrice | currency}}</div>
+        <div><strong> Total Items: </strong> {{cart.totalCount}}</div>
+        <div><strong>Total Price: </strong> {{cart.totalPrice | currency}}</div>
         <a class="w-100 btn btn-success btn-sm flex-grow-1" routerLink="/checkout">Proceed to checkout</a>
       </div>
     </div>
