@@ -1,9 +1,11 @@
 <div class="container pt-5 mt-5">
   <app-title title="Cart Page" margin="1.5rem 0"></app-title>
-  <ng-container *ngIf="cart.items.length === 0">
-    <div>Cart is empty</div>
-  </ng-container>
-  <div class="row" style="position: relative">
+  <app-not-found-page
+  [visible]="!cart || !cart.items.length"
+  notFoundMessage="Cart page is empty!"
+  resetLinkText="Go to home page"></app-not-found-page>
+
+  <div *ngIf="cart && cart.items.length" class="row" style="position: relative">
     <div class="col-md-9">
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-around align-items-center"
@@ -46,5 +48,4 @@
       </div>
     </div>
   </div>
-
 </div>
