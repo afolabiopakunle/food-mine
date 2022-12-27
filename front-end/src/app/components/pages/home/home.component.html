@@ -1,6 +1,10 @@
 <div class="row pt-5 mt-5">
   <app-search (searchTerm)="findFood($event)" ></app-search>
   <app-tags></app-tags>
+  <app-not-found-page
+    [visible]="!foods  || !foods.length "
+    resetLinkText="Reset Search"
+  ></app-not-found-page>
   <app-food-card [foods]="foods"></app-food-card>
 </div>
 
