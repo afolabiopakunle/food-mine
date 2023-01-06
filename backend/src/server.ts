@@ -33,6 +33,6 @@ app.get("/api/foods/:foodId", (req, res) => {
     res.send(food);
 })
 
-const PORT = 5001;
+const PORT = 5002;
 
 app.listen(PORT, () => console.log(`App listening on high port ${PORT}`));
