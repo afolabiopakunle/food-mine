@@ -22,11 +22,6 @@ export class FoodPageComponent implements OnInit {
       if(param['id']) {
         this.foodService.getFoodById(param['id'])
           .subscribe(response => {
-            if(response === null) {
-              console.log("NULL",response)
-              this.food = new Food();
-              return
-            }
             this.food = response;
           });
       }
