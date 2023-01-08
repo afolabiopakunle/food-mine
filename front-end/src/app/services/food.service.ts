@@ -4,7 +4,13 @@ import { sample_foods, sample_tags } from '../data';
 import { Tag } from '../shared/models/Tag';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FOODS_BY_SEARCH_URL, FOODS_BY_TAG_URL, FOODS_URL } from '../shared/constants/urls';
+import {
+  FOODS_TAGS_URL,
+  FOODS_BY_SEARCH_URL,
+  FOOD_BY_TAG_URL,
+  FOODS_URL,
+  FOODS_BY_ID_URL,
+} from '../shared/constants/urls';
 
 @Injectable({
   providedIn: 'root'
@@ -22,15 +28,17 @@ export class FoodService {
   }
 
   getAllTags(): Observable<Tag[]> {
-    return this.http.get<Tag[]>(FOODS_BY_TAG_URL)
+    return this.http.get<Tag[]>(FOODS_TAGS_URL);
   }
 
   getAllFoodByTag(searchTag: string): Observable<Food[]> {
-   return searchTag === 'All' ? this.getAllFood() : this.http.get<Food[]>(FOODS_BY_TAG_URL + searchTag)
+   const result = searchTag === 'All' ? this.getAllFood() : this.http.get<Food[]>(FOOD_BY_TAG_URL + searchTag)
+    console.log('RESOLVE: ',FOOD_BY_TAG_URL + searchTag)
+    return result;
   }
 
   getFoodById(foodId: string) {
-    return this.http.get<Food[]>(FOODS_BY_TAG_URL + foodId)
+    return this.http.get<Food>(FOODS_BY_ID_URL + foodId)
   }
 
 }
