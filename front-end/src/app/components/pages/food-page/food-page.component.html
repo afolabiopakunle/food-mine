@@ -4,7 +4,7 @@
   notFoundMessage="Food not found"
   resetLinkText="Back to home page"
   ></app-not-found-page>
-  <div class="row" *ngIf="food.id">
+  <div class="row" *ngIf="food?.id">
     <div class="col-md-6">
     <img class="img-fluid rounded-5" [src]="food.imageUrl" [alt]="food.name">
     </div>

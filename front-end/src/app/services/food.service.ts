@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import {
   FOODS_TAGS_URL,
   FOODS_BY_SEARCH_URL,
-  FOOD_BY_TAG_URL,
+  FOODS_BY_TAG_URL,
   FOODS_URL,
   FOODS_BY_ID_URL,
 } from '../shared/constants/urls';
@@ -32,13 +32,11 @@ export class FoodService {
   }
 
   getAllFoodByTag(searchTag: string): Observable<Food[]> {
-   const result = searchTag === 'All' ? this.getAllFood() : this.http.get<Food[]>(FOOD_BY_TAG_URL + searchTag)
-    console.log('RESOLVE: ',FOOD_BY_TAG_URL + searchTag)
-    return result;
+   return searchTag === 'All' ? this.getAllFood() : this.http.get<Food[]>(FOODS_BY_TAG_URL + searchTag)
   }
 
   getFoodById(foodId: string) {
-    return this.http.get<Food>(FOODS_BY_ID_URL + foodId)
+    return this.http.get<Food>(FOODS_BY_ID_URL + foodId);
   }
 
 }

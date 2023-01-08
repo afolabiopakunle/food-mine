@@ -2,7 +2,8 @@
   <app-search (searchTerm)="findFood($event)" ></app-search>
   <app-tags></app-tags>
   <app-not-found-page
-    [visible]="!foods  || !foods.length "
+    [visible]="!foods  || !foods.length"
+    notFoundMessage="Nothing found"
     resetLinkText="Reset Search"
   ></app-not-found-page>
   <app-food-card [foods]="foods"></app-food-card>

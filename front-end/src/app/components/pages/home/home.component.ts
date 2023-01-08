@@ -33,6 +33,10 @@ export class HomeComponent implements OnInit {
   }
 
   findFood(value: string) {
+    if(value === '') {
+      this.ngOnInit();
+      return
+    }
     this.foodService.getFoodSearchTerm(value)
       .subscribe(serverFoods => {
         this.foods = serverFoods;
