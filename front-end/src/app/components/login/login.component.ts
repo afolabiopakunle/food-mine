@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   isSubmitted = false;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, ) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
